@@ -85,3 +85,8 @@ def digitize(arr, unit):
     if unit < 1e-6:
         return arr
     return np.round(arr / unit) * unit
+
+def save_model(model, name, folder):
+    if not os.path.isdir(folder):
+        os.makedirs(folder)
+    torch.save(model.state_dict(), folder + name) 
