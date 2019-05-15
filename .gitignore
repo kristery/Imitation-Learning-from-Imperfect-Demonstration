@@ -1,2 +1,4 @@
 model/
 log/
+execute.sh
+output/

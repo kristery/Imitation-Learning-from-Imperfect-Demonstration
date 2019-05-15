@@ -290,5 +290,3 @@ for i_episode in range(args.num_epochs):
 
     if i_episode % args.log_interval == 0:
         print('Episode {}\tAverage reward: {:.2f}\tMax reward: {:.2f}\tLoss (disc): {:.2f}'.format(i_episode, np.mean(reward_batch), max(reward_batch), disc_loss.item()))
-
-save_model(policy_net, args.env+'_ICGAIL', './model/')
